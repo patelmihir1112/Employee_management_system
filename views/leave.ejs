@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2> leave page</h2>
+    <div>
+        
+        <a href="/Register">register page</a>&nbsp;&nbsp;
+        
+        <a href="/Dashboard">dashboard page</a>&nbsp;&nbsp;
+        <a href="/Employee/Add_Employee">Add_Employee page</a>&nbsp;&nbsp;
+        <a href="/Logout">logout</a>&nbsp;&nbsp;
+    </div>
+    <form method="post" action="/Employee/leave">
+        <div>
+            <hr>
+            <label for="leave_type">Choose a leave type</label>
+            <select name="leave_type" id="leave_type">
+                <option value=0.5>half day</option>
+                <option value=1>full day</option>
+            </select>
+            <br><br>
+            <label for="leave_date"><b>leave date</b></label>
+            <input type="date" placeholder="leave date" name="leave_date" id="leave_date" required><br /><br />
+        
+            <label for="reason"><b>Reason</b></label>
+            <input type="text" placeholder="Enter Reason" name="Reason" id="Reason" minlength="5" required><br /><br />
+
+            <label for="Employee">Choose a Employee</label> 
+            
+            <select name="Emp_ID" id="Employee">
+               <option>select</option>
+                    <% data.forEach(function(s) { %>  
+                        
+                      <option name = "Emp_ID" value="<%= s.Emp_ID %>"><%= s.FirstName %></option>
+                      <% })%>
+        
+            </select>
+            
+            <hr>
+        </div>
+        <button type="submit" >submit</button>
+    </form>
+
+</body>
+
+</html>

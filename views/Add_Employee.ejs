@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div>
+    
+    <a href="/Register">register page</a>&nbsp;&nbsp;
+    <a href="/Dashboard">dashboard page</a>&nbsp;&nbsp;
+    <a href="/Logout">logout</a>&nbsp;&nbsp;
+    <a href="/Employee/leave">leave page</a>&nbsp;&nbsp;
+</div>
+    <form  method="post" action="/Employee/Add_Employee">
+        <div >
+          <h1>Add Employee</h1>
+          <p>Please fill in this form to Add Employee.</p>
+          <hr>
+      
+          <label for="F_name"><b>First Name</b></label>
+          <input type="text" placeholder="First Name" name="F_name" id="F_name" min required><br/><br/>
+      
+          <label for="L_name"><b>Last Name</b></label>
+          <input type="text" placeholder="Last Name" name="L_name" id="L_name" required><br/><br/>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" id="email" required><br/><br/>
+      
+          <label for="salary"><b>Salary</b></label>
+          <input type="number" placeholder="Enter Salary" name="Salary" id="Salary" required><br/><br/>
+      
+         
+          <hr>
+      
+      
+          <button type="submit" >ADD Employee</button>
+        </div>
+      </form>
+</body>
+</html>

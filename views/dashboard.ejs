@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table, th, td {
+          border: 1px solid black;
+        }
+        </style>
+        <div>
+            
+            <a href="/Register">register page</a>&nbsp;&nbsp;
+            
+            <a href="/Employee/leave">leave page</a>&nbsp;&nbsp;
+            <a href="/Employee/Add_Employee">Add_Employee page</a>
+            <a href="/Logout">logout</a>&nbsp;&nbsp;
+        </div>
+        
+    <h2>dashbord</h2>
+    <button><a href="/Employee/leave">leave page</a></button><br>
+    
+    <table style="width: 100% " >
+        <tr>
+            <th>Sr.No</th>
+            <th> First name</th>
+            <th>Last name</th>
+            <th>Email</th>
+            <th>Actual Salary</th>
+            <th>Totalleave</th>
+            <th>Salary</th>
+
+        </tr>
+        <% if(data.length!=0){ var i=1; data.forEach(function(data){ %>
+            <tr>
+                <td>
+                    <%=i; %>
+                </td>
+                <td>
+                    <%=data.FirstName %>
+                </td>
+                <td>
+                    <%=data.LastName%>
+                </td>
+                <td>
+                    <%=data.Email%>
+                </td>
+                <td>
+                    <%=data.salary%>
+                </td>
+                <td>
+                    <%=data.total_leave%>
+                </td>
+                <td>
+                    <%=data.cal_salary%>
+                </td>
+            </tr>
+            <% i++; }) %>
+                <% } else{ %>
+                    <tr>
+                        <td colspan="7">No Data Found</td>
+                    </tr>
+                    <% } %>
+    </table>
+
+</body>
+</html>
